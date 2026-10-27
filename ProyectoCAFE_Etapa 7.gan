@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Etapa 6" company="" webLink="http://" view-date="2026-11-24" view-index="0" gantt-divider-location="770" resource-divider-location="300" version="3.3.3322" locale="es_ES">
+    <description/>
+    <view zooming-state="default:3" id="gantt-chart">
+        <field id="tpd15" name="Notas" width="20" order="-1"/>
+        <field id="tpd3" name="Nombre" width="430" order="0"/>
+        <field id="tpd4" name="Fecha de inicio" width="161" order="1"/>
+        <field id="tpd5" name="Fecha de fin" width="163" order="2"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+        <option id="color.recent"><![CDATA[#ffff00 #ff0000 #00ff00]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nombre" width="210" order="0"/>
+        <field id="1" name="Función" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="0" mon="0" tue="0" wed="0" thu="0" fri="0" sat="0"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" uid="0937dc03649841d08db64ddf92a8fd3e" name="Etapa 7. Mantenimiento/Cierre del proyecto" color="#ffff00" meeting="false" start="2026-11-25" duration="8" complete="0" expand="true"/>
+        <task id="1" uid="5e42848cfaf2424f8e41a2d7faa834ab" name="7.1  Recopilar observaciones y errores detectados durante la verificación" color="#ffff00" meeting="false" start="2026-11-25" duration="1" complete="0" expand="true"/>
+        <task id="2" uid="6014286566b34f68a9e59377b5fcdee1" name="7.2  Priorizar los errores y las mejoras identificadas" color="#ffff00" meeting="false" start="2026-11-26" duration="1" complete="0" expand="true"/>
+        <task id="3" uid="a139c14887944453b15e8f8744c1ea9d" name="7.3  Aplicar correcciones dentro del alcance del proyecto" color="#ffff00" meeting="false" start="2026-11-27" duration="2" complete="0" expand="true"/>
+        <task id="4" uid="e8ff593ba9c94f1e8fac450e2e068e8b" name="7.4  Verificar las correcciones y documentar los cambios" color="#ffff00" meeting="false" start="2026-11-29" duration="1" complete="0" expand="true"/>
+        <task id="5" uid="bf575dc0bc7a4614ae39e3182c695995" name="7.5 Integrar la documentación final del proyecto" color="#ffff00" meeting="false" start="2026-11-30" duration="1" complete="0" expand="true"/>
+        <task id="6" uid="a0a4931f23da43b994b8360039f77496" name="7.6  Revisar los objetivos, requisitos y funcionalidades entregadas" color="#ffff00" meeting="false" start="2026-12-01" duration="1" complete="0" expand="true"/>
+        <task id="7" uid="8c64752888564ea2905076ac2d7bf02c" name="7.7 Preparar la presentación y formalizar el cierre del proyecto" color="#ffff00" meeting="false" start="2026-12-02" duration="1" complete="0" expand="true"/>
+        <task id="14" uid="c114cf856d03469a94a038cdd9d562ac" name="Mantenimiento/Cierre terminado" meeting="true" start="2026-12-02" duration="0" complete="0" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
