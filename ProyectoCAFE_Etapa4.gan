@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2026-09-08" view-index="0" gantt-divider-location="362" resource-divider-location="300" version="3.3.3322" locale="es_ES">
+    <description/>
+    <view zooming-state="default:3" id="gantt-chart">
+        <field id="tpd3" name="Nombre" width="197" order="0"/>
+        <field id="tpd4" name="Fecha de inicio" width="82" order="1"/>
+        <field id="tpd5" name="Fecha de fin" width="82" order="2"/>
+        <field id="tpd15" name="Notas" width="20" order="3"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+        <option id="color.recent"><![CDATA[#00ff00]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nombre" width="210" order="0"/>
+        <field id="1" name="Función" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="0" mon="0" tue="0" wed="0" thu="0" fri="0" sat="0"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="4" uid="523c4c3a4e8d4150b9e809a77076d1b5" name="Etapa 4.Codificacion" color="#00ff00" meeting="false" start="2026-10-01" duration="36" complete="0" expand="true"/>
+        <task id="5" uid="45a7dc2dc44544878bbe204488654f08" name="4.1  Preparar el proyecto Flutter y la estructura del código" color="#00ff00" meeting="false" start="2026-10-01" duration="3" complete="0" expand="true"/>
+        <task id="6" uid="344bffaa8d604027b42db063ee733243" name="4.2  Implementar las pantallas principales de bienvenida, inicio de sesión y registro" color="#00ff00" meeting="false" start="2026-10-04" duration="7" complete="0" expand="true"/>
+        <task id="7" uid="5130e78c8ae74ab3a1327e63fb75dd3e" name="4.3  Implementar la navegación y las interfaces del menú y los productos" color="#00ff00" meeting="false" start="2026-10-11" duration="6" complete="0" expand="true"/>
+        <task id="8" uid="d0135e8bcb9e40d7b771d763a5167394" name="4.4  Programar el carrito, la confirmación y la creación de pedidos" color="#00ff00" meeting="false" start="2026-10-17" duration="6" complete="0" expand="true"/>
+        <task id="9" uid="12678af687a94f6c9edd994b882f90f1" name="4.5  Implementar la consulta y actualización del estado de los pedidos" color="#00ff00" meeting="false" start="2026-10-23" duration="1" complete="0" expand="true"/>
+        <task id="10" uid="bbcf3564f12147a9b7cb2ff10cbdf2f4" name="4.6  Desarrollar el panel de administración para productos y pedidos" color="#00ff00" meeting="false" start="2026-10-28" duration="4" complete="0" expand="true"/>
+        <task id="11" uid="a8029b536f314339959d4ed273e7df10" name="4.7  Integrar Firebase Authentication y Cloud Firestore" color="#00ff00" meeting="false" start="2026-11-01" duration="3" complete="0" expand="true"/>
+        <task id="12" uid="f9378df511ef4a6aacddd7b6c776b4d6" name="4.8  Integrar, corregir y revisar los módulos implementados" color="#00ff00" meeting="false" start="2026-11-04" duration="2" complete="0" expand="true"/>
+        <task id="13" uid="a2533e0d9c924a2292ccec0ded1e20c2" name="Codificación terminada" meeting="true" start="2026-11-05" duration="0" complete="0" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
