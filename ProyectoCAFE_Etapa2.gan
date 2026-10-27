@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2026-10-07" view-index="0" gantt-divider-location="713" resource-divider-location="300" version="3.3.3316" locale="es_ES">
+    <description/>
+    <view zooming-state="default:2" id="gantt-chart">
+        <field id="tpd15" name="Notes" width="20" order="-1"/>
+        <field id="tpd3" name="Nombre" width="482" order="0"/>
+        <field id="tpd4" name="Fecha de inicio" width="110" order="1"/>
+        <field id="tpd5" name="Fecha de fin" width="121" order="2"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+        <option id="color.recent"><![CDATA[#000000 #ff66ff]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nombre" width="210" order="0"/>
+        <field id="1" name="Función" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="2" uid="1a0ad09c122146d9bb163a9b59af8142" name="Etapa 2. Análisis de requisitos" color="#ff66ff" meeting="false" start="2026-09-14" duration="5" complete="0" expand="true"/>
+        <task id="3" uid="72b81eb36f9a464fb63e86f2e0d541ca" name="2.1 Identificar las necesidades de los estudiantes" color="#ff66ff" meeting="false" start="2026-09-14" duration="1" complete="0" expand="true"/>
+        <task id="4" uid="16e7fa440b0b43fb85abf68ac9c670c8" name="2.2 Identificar las necesidades del administrador de la cafetería" color="#ff66ff" meeting="false" start="2026-09-15" duration="1" complete="0" expand="true"/>
+        <task id="5" uid="03663e07d73542b98b0c8f4b70dba13d" name="2.3 Definir requisitos funcionales y no funcionales preliminares" color="#ff66ff" meeting="false" start="2026-09-16" duration="2" complete="0" expand="true"/>
+        <task id="6" uid="ce4498eb31384abaa77b34ac9c2b9aba" name="2.4 Identificar roles, reglas de negocio y casos de uso preliminares" color="#ff66ff" meeting="false" start="2026-09-18" duration="1" complete="0" expand="true"/>
+        <task id="7" uid="5fff967fea884ed1952e852eb3e1f6dc" name="2.5 Elaborar el cuestionario para los interesados (stakeholders)" color="#ff66ff" meeting="false" start="2026-10-07" duration="1" complete="0" expand="true"/>
+        <task id="8" uid="d4940d1dbcb64a92811fae64937aaf7c" name="2.6 Analizar las respuestas y los requisitos obtenidos" color="#ff66ff" meeting="false" start="2026-10-07" duration="1" complete="0" expand="true"/>
+        <task id="9" uid="db20cf15938246ae943c0ae092433662" name="2.7 Iniciar la especificación y documentación formal de los requisitos" color="#ff66ff" meeting="false" start="2026-10-07" duration="1" complete="0" expand="true"/>
+        <task id="10" uid="0c23e3ce9ca1466cbac9424b08f17b49" name="2.8 Validar los requisitos para comprobar su claridad, coherencia y pertinencia" color="#ff66ff" meeting="false" start="2026-10-08" duration="1" complete="0" expand="true"/>
+        <task id="11" uid="1a42d9cc36ca45bba51042bfc1167ff2" name="2.9 Gestionar los requisitos, organizando y controlando los cambios identificados" color="#ff66ff" meeting="false" start="2026-10-08" duration="1" complete="0" expand="true"/>
+        <task id="12" uid="94a7d2ce2ed146559c9b5a5eec118015" name="2.10 Integrar, revisar y entregar el documento de especificación de requisitos" color="#ff66ff" meeting="false" start="2026-10-09" duration="1" complete="0" expand="true"/>
+        <task id="13" uid="131dff4ce6364f5d91e04ff91e5e199d" name="Análisis de requisitos Terminado" color="#000000" meeting="true" start="2026-10-12" duration="0" complete="0" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>

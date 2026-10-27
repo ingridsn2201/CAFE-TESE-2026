@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Etapa 3. Diseño " company="" webLink="http://" view-date="2026-09-20" view-index="0" gantt-divider-location="735" resource-divider-location="300" version="3.3.3316" locale="es_ES">
+    <description/>
+    <view zooming-state="default:2" id="gantt-chart">
+        <field id="tpd15" name="Notes" width="20" order="-1"/>
+        <field id="tpd3" name="Nombre" width="200" order="0"/>
+        <field id="tpd4" name="Fecha de inicio" width="75" order="1"/>
+        <field id="tpd5" name="Fecha de fin" width="75" order="2"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+        <option id="color.recent"><![CDATA[#003333 #000000 #ff66ff]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nombre" width="200" order="0"/>
+        <field id="1" name="Función" width="75" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="0" mon="0" tue="0" wed="0" thu="0" fri="0" sat="0"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" uid="8e8e3b2499a84987926cc48abc11905a" name="Etapa 3. Diseño" color="#003333" meeting="false" start="2026-09-21" duration="8" complete="0" expand="true"/>
+        <task id="1" uid="7b02277eec0549a88b0f063bb8676cf1" name="3.1 Diseñar la estructura general y la navegación del sistema" color="#003333" meeting="false" start="2026-09-21" duration="2" complete="0" expand="true"/>
+        <task id="2" uid="1c5b1ebe295744b89fb0a6fcb50ca7fa" name="3.2 Definir las interfaces para estudiantes y administradores" color="#003333" meeting="false" start="2026-09-23" duration="2" complete="0" expand="true"/>
+        <task id="3" uid="ba487bd336fe44249d125629ad125566" name="3.3 Diseñar el flujo de consulta de productos y realización de pedidos" color="#003333" meeting="false" start="2026-09-25" duration="1" complete="0" expand="true"/>
+        <task id="4" uid="010d8c0684104a0fa6e1a18a43804e6a" name="3.4 Elaborar la propuesta de arquitectura de la aplicación" color="#003333" meeting="false" start="2026-09-27" duration="2" complete="0" expand="true"/>
+        <task id="5" uid="ff56fa54b78f437e8ff77f6977e4384c" name="3.5 Definir los componentes, módulos y responsabilidades de la arquitectura" color="#003333" meeting="false" start="2026-09-29" duration="1" complete="0" expand="true"/>
+        <task id="6" uid="1a3f368feb1c4c828179c49bab0d17ac" name="3.6 Revisar la propuesta de diseño y su correspondencia con los requisitos" color="#003333" meeting="false" start="2026-09-30" duration="1" complete="0" expand="true"/>
+        <task id="7" uid="11141df5d7bd4195b6e0558ffb785eef" name="3.7 Elaborar la maquetación de la aplicación en Flutter conforme al flujo de navegación definido" color="#003333" meeting="false" start="2026-10-05" duration="3" complete="0" expand="true"/>
+        <task id="8" uid="6cce91bc344048f68315ebd0e7e01e65" name="3.8 Ajustar la maquetación y el diseño con base en los cambios identificados" color="#003333" meeting="false" start="2026-10-07" duration="4" complete="0" expand="true"/>
+        <task id="9" uid="334bac4c443740abb6da7bd5d8222fef" name="Diseño Terminado" color="#003333" meeting="true" start="2026-10-10" duration="0" complete="0" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
