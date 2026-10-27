@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Etapa 5" company="" webLink="http://" view-date="2026-11-05" view-index="0" gantt-divider-location="770" resource-divider-location="300" version="3.3.3322" locale="es_ES">
+    <description/>
+    <view zooming-state="default:3" id="gantt-chart">
+        <field id="tpd15" name="Notas" width="20" order="-1"/>
+        <field id="tpd3" name="Nombre" width="439" order="0"/>
+        <field id="tpd4" name="Fecha de inicio" width="164" order="1"/>
+        <field id="tpd5" name="Fecha de fin" width="166" order="2"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+        <option id="color.recent"><![CDATA[#ff0000 #00ff00]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nombre" width="210" order="0"/>
+        <field id="1" name="Función" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="0" mon="0" tue="0" wed="0" thu="0" fri="0" sat="0"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" uid="dd0e11939d4346cda7e499c776b8d43c" name="Etapa 5. Pruebas" color="#ff0000" meeting="false" start="2026-11-06" duration="14" complete="0" expand="true"/>
+        <task id="1" uid="189889ab64374f05aaece840bcc7ea34" name="5.1  Elaborar los casos de prueba con base en los requisitos" color="#ff0000" meeting="false" start="2026-11-06" duration="2" complete="0" expand="true"/>
+        <task id="2" uid="67cf482f5eb849fabdb46566022c25ab" name="5.2  Realizar pruebas de inicio de sesión y registro" color="#ff0000" meeting="false" start="2026-11-08" duration="2" complete="0" expand="true"/>
+        <task id="3" uid="36659770699f4e9e99af9e381c60151f" name="5.3  Probar la consulta de productos y el funcionamiento del carrito" color="#ff0000" meeting="false" start="2026-11-10" duration="2" complete="0" expand="true"/>
+        <task id="4" uid="0ebe741102cc4a258fb920d091e1223e" name="5.4  Probar la creación de pedidos y el seguimiento de su estado" color="#ff0000" meeting="false" start="2026-11-12" duration="2" complete="0" expand="true"/>
+        <task id="5" uid="865b61cad8c6404b86e236122129bec4" name="5.5  Probar las funciones del panel de administración y los permisos por rol" color="#ff0000" meeting="false" start="2026-11-14" duration="2" complete="0" expand="true"/>
+        <task id="6" uid="29249a4b1a6644cc9d434ff4c9e270a6" name="5.6  Realizar pruebas de integración y persistencia de datos en Firebase" color="#ff0000" meeting="false" start="2026-11-16" duration="2" complete="0" expand="true"/>
+        <task id="7" uid="c81ca0d384bd437babc191a14ac72d5e" name="5.7  Corregir errores y ejecutar pruebas de regresión" color="#ff0000" meeting="false" start="2026-11-18" duration="2" complete="0" expand="true"/>
+        <task id="8" uid="c845a9194981449abc8a62a3fb3f8a2d" name="Pruebas terminadas" meeting="true" start="2026-11-19" duration="0" complete="0" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
