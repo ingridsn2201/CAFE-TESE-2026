@@ -1,0 +1,15 @@
+**Aportación individual al proyecto CAFETESE**
+
+Nombre: Daniela Gómez Medina
+
+Proyecto: CAFETESE
+
+Mi aportación al proyecto consiste en participar en el desarrollo de una aplicación móvil para mejorar el servicio de la cafetería del Tecnológico de Estudios Superiores de Ecatepec.
+
+He trabajado en la configuración del entorno de desarrollo utilizando Visual Studio Code, Flutter, Dart y Android Studio.
+
+También desarrollé la clase Producto en Dart, definiendo sus atributos y los métodos para aplicar descuentos y reducir el inventario. Realicé una prueba para comprobar su funcionamiento.
+
+Además, participé en la elaboración del modelo UML y en la organización de los archivos del proyecto mediante GitHub.
+
+Estas actividades contribuyen al desarrollo y organización de CAFETESE.
