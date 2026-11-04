@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Etapa 6" company="" webLink="http://" view-date="2026-11-20" view-index="0" gantt-divider-location="351" resource-divider-location="300" version="3.3.3316" locale="es_ES">
+    <description/>
+    <view zooming-state="default:2" id="gantt-chart">
+        <field id="tpd15" name="Notes" width="20" order="-1"/>
+        <field id="tpd3" name="Nombre" width="200" order="0"/>
+        <field id="tpd4" name="Fecha de inicio" width="75" order="1"/>
+        <field id="tpd5" name="Fecha de fin" width="75" order="2"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+        <option id="color.recent"><![CDATA[#000000 #333300 #003333 #ff66ff]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nombre" width="210" order="0"/>
+        <field id="1" name="Función" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="0" mon="0" tue="0" wed="0" thu="0" fri="0" sat="0"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" uid="ad7b681ccfaf4687b45b46d628dbd0ba" name="Etapa 6 .Implementación" color="#333300" meeting="false" start="2026-11-20" duration="3" complete="0" expand="true"/>
+        <task id="5" uid="c422533d903841aaafb75d1d333d2987" name="6.2 Configurar los servicios y los datos necesarios para el entorno de uso" color="#333300" meeting="false" start="2026-11-21" duration="1" complete="0" expand="true"/>
+        <task id="6" uid="b06f6942b1e84c31adb86790756efee2" name="6.3 Generar y verificar la compilación de la aplicación" color="#333300" meeting="false" start="2026-11-22" duration="1" complete="0" expand="true"/>
+        <task id="7" uid="19dac49b94f34bdda230142cde1c4c57" name="6.4 Instalar o desplegar la aplicación en el entorno previsto" color="#333300" meeting="false" start="2026-11-23" duration="1" complete="0" expand="true"/>
+        <task id="8" uid="cd5a05bc4c644a7fbdb357fce70c8922" name="6.5 Verificar el funcionamiento de la versión implementada" color="#333300" meeting="false" start="2026-11-24" duration="1" complete="0" expand="true"/>
+        <task id="9" uid="cefa5f0d54c7494595ecdc8a79fda90e" name="Implementación Terminada" color="#000000" meeting="true" start="2026-11-24" duration="0" complete="0" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
