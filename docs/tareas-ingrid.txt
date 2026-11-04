@@ -1,0 +1,13 @@
+Nombre: Ingrid Natalia Sánchez Nicanor
+Proyecto: CAFE-TESE-2026
+Materia: Fundamentos de Ingeniería de Software
+
+Aportaciones realizadas:
+
+1. Creación y organización del repositorio del equipo en GitHub.
+2. Elaboración del diagrama de clases UML para el módulo de pedidos.
+3. Desarrollo de la clase Producto utilizando Dart.
+4. Implementación del método aplicarDescuento().
+5. Realización de pruebas para verificar el funcionamiento del método.
+
+Archivo desarrollado: modelo_producto.dart
