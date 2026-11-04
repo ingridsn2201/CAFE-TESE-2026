@@ -15,14 +15,15 @@ class Producto {
     required this.descripcion,
   });
 
-  // Metodo para aplicar un descuento
+  // Método para aplicar un descuento
   void aplicarDescuento(double porcentaje) {
     if (porcentaje >= 0 && porcentaje <= 100) {
-      precio = precio - (precio * porcentaje / 100);
+      double descuento = precio * porcentaje / 100;
+      precio = precio - descuento;
     }
   }
 
-  // Metodo para reducir el inventario
+  // Método para reducir el inventario
   void reducirStock(int cantidad) {
     if (cantidad > 0 && cantidad <= stock) {
       stock = stock - cantidad;
