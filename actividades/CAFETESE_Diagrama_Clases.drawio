@@ -1,0 +1,98 @@
+<mxfile host="app.diagrams.net" pages="2">
+  <diagram name="Página-1" id="eOwrcU7Ljc8jfk-CHbpq">
+    <mxGraphModel dx="841" dy="655" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="UeysRCAe_FQ_PYFf_8TH-21" edge="1" parent="1" source="UeysRCAe_FQ_PYFf_8TH-1" style="edgeStyle=none;curved=1;rounded=0;curveGeometry=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;defaultLabelBackgroundColor=page;startSize=8;endSize=8;startArrow=none;startFill=0;endArrow=none;endFill=0;" target="UeysRCAe_FQ_PYFf_8TH-10" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="179.43396226415098" y="680" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UeysRCAe_FQ_PYFf_8TH-1" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=60;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#99CCFF;" value="&lt;p&gt;«Entity»&lt;/p&gt;&lt;p&gt;Usuario&lt;/p&gt;" vertex="1">
+          <mxGeometry height="220" width="200" x="80" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="UeysRCAe_FQ_PYFf_8TH-2" parent="UeysRCAe_FQ_PYFf_8TH-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="&lt;p&gt;- id: String&lt;br&gt;- nombre: String&lt;br&gt;- matricula: String&lt;br&gt;- correo: String&lt;br&gt;- saldo: double&lt;/p&gt;&lt;div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="100" width="200" y="60" as="geometry" />
+        </mxCell>
+        <mxCell id="UeysRCAe_FQ_PYFf_8TH-3" parent="UeysRCAe_FQ_PYFf_8TH-1" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;labelPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="8" width="200" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="UeysRCAe_FQ_PYFf_8TH-4" parent="UeysRCAe_FQ_PYFf_8TH-1" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ iniciarSesion(): bool&lt;br&gt;+ consultarSaldo(): double" vertex="1">
+          <mxGeometry height="52" width="200" y="168" as="geometry" />
+        </mxCell>
+        <mxCell id="UeysRCAe_FQ_PYFf_8TH-6" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=70;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#99CCFF;" value="&lt;div&gt;&lt;p&gt;«Entity»&lt;/p&gt;&lt;p&gt;Producto&lt;/p&gt;&lt;/div&gt;&lt;div&gt;&lt;/div&gt;" vertex="1">
+          <mxGeometry height="250" width="210" x="380" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="UeysRCAe_FQ_PYFf_8TH-7" parent="UeysRCAe_FQ_PYFf_8TH-6" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- id: String&lt;br&gt;- nombre: String&lt;br&gt;- precio: double&lt;br&gt;- stock: int&lt;br&gt;- descripcion: String" vertex="1">
+          <mxGeometry height="90" width="210" y="70" as="geometry" />
+        </mxCell>
+        <mxCell id="UeysRCAe_FQ_PYFf_8TH-8" parent="UeysRCAe_FQ_PYFf_8TH-6" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;labelPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="8" width="210" y="160" as="geometry" />
+        </mxCell>
+        <mxCell id="UeysRCAe_FQ_PYFf_8TH-9" parent="UeysRCAe_FQ_PYFf_8TH-6" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ aplicarDescuento(porcentaje: double): void&lt;br&gt;+ reducirStock(cantidad: int): void" vertex="1">
+          <mxGeometry height="82" width="210" y="168" as="geometry" />
+        </mxCell>
+        <mxCell id="UeysRCAe_FQ_PYFf_8TH-24" edge="1" parent="1" style="edgeStyle=none;curved=1;rounded=0;curveGeometry=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;defaultLabelBackgroundColor=page;startSize=8;endSize=8;entryX=0;entryY=1;entryDx=0;entryDy=0;endArrow=none;endFill=0;" value="">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="290.0002844346325" y="421.9241729001726" as="sourcePoint" />
+            <mxPoint x="378.63" y="320" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="UeysRCAe_FQ_PYFf_8TH-28" edge="1" parent="1" source="UeysRCAe_FQ_PYFf_8TH-10" style="edgeStyle=none;curved=1;rounded=0;curveGeometry=1;orthogonalLoop=1;jettySize=auto;html=1;fontSize=12;defaultLabelBackgroundColor=page;startSize=8;endSize=8;endArrow=none;endFill=0;" target="UeysRCAe_FQ_PYFf_8TH-15" value="">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="UeysRCAe_FQ_PYFf_8TH-10" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=86;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#99CCFF;rotation=1;" value="&lt;p&gt;«Entity»&lt;/p&gt;&lt;p&gt;Pedido&lt;/p&gt;" vertex="1">
+          <mxGeometry height="260" width="220" x="70" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="UeysRCAe_FQ_PYFf_8TH-11" parent="UeysRCAe_FQ_PYFf_8TH-10" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;rotation=1;" value="- folio: String&lt;br&gt;- fecha: DateTime&lt;br&gt;- listaProductos: List&amp;lt;Producto&amp;gt;&lt;br&gt;- total: double&lt;br&gt;- estado: String" vertex="1">
+          <mxGeometry height="104" width="220" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="UeysRCAe_FQ_PYFf_8TH-12" parent="UeysRCAe_FQ_PYFf_8TH-10" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;labelPerimeter=1;rotation=1;" value="" vertex="1">
+          <mxGeometry height="8" width="220" y="190" as="geometry" />
+        </mxCell>
+        <mxCell id="UeysRCAe_FQ_PYFf_8TH-13" parent="UeysRCAe_FQ_PYFf_8TH-10" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;rotation=1;" value="+ calcularTotal(): double&lt;br&gt;+ agregarProducto(p: Producto): void&lt;br&gt;+ cambiarEstado(estado: String): void" vertex="1">
+          <mxGeometry height="62" width="220" y="198" as="geometry" />
+        </mxCell>
+        <mxCell id="UeysRCAe_FQ_PYFf_8TH-14" parent="1" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=86;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#99CCFF;" value="&lt;p&gt;«Control»&lt;/p&gt;&lt;p&gt;GestorPedidos&lt;/p&gt;" vertex="1">
+          <mxGeometry height="240" width="240" x="380" y="420" as="geometry" />
+        </mxCell>
+        <mxCell id="UeysRCAe_FQ_PYFf_8TH-15" parent="UeysRCAe_FQ_PYFf_8TH-14" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="- listaPedidos: List&amp;lt;Pedido&amp;gt;&lt;br&gt;- contadorPedidos: int" vertex="1">
+          <mxGeometry height="84" width="240" y="86" as="geometry" />
+        </mxCell>
+        <mxCell id="UeysRCAe_FQ_PYFf_8TH-16" parent="UeysRCAe_FQ_PYFf_8TH-14" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=inherit;labelPerimeter=1;" value="" vertex="1">
+          <mxGeometry height="8" width="240" y="170" as="geometry" />
+        </mxCell>
+        <mxCell id="UeysRCAe_FQ_PYFf_8TH-17" parent="UeysRCAe_FQ_PYFf_8TH-14" style="text;strokeColor=none;fillColor=none;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" value="+ crearPedido(usuario: Usuario): Pedido&lt;br&gt;+ confirmarPedido(pedido: Pedido): bool&lt;br&gt;+ cancelarPedido(folio: String): void" vertex="1">
+          <mxGeometry height="62" width="240" y="178" as="geometry" />
+        </mxCell>
+        <mxCell id="UeysRCAe_FQ_PYFf_8TH-22" parent="1" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" value="1" vertex="1">
+          <mxGeometry height="26" width="80" x="170" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="UeysRCAe_FQ_PYFf_8TH-23" parent="1" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" value="0..*" vertex="1">
+          <mxGeometry height="26" width="80" x="170" y="394" as="geometry" />
+        </mxCell>
+        <mxCell id="UeysRCAe_FQ_PYFf_8TH-25" parent="1" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" value="1..*" vertex="1">
+          <mxGeometry height="26" width="80" x="320" y="300" as="geometry" />
+        </mxCell>
+        <mxCell id="UeysRCAe_FQ_PYFf_8TH-27" parent="1" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" value="0..*" vertex="1">
+          <mxGeometry height="26" width="80" x="230" y="394" as="geometry" />
+        </mxCell>
+        <mxCell id="UeysRCAe_FQ_PYFf_8TH-30" parent="1" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" value="0..*" vertex="1">
+          <mxGeometry height="26" width="80" x="270" y="550" as="geometry" />
+        </mxCell>
+        <mxCell id="UeysRCAe_FQ_PYFf_8TH-31" parent="1" style="text;align=center;fontStyle=1;verticalAlign=middle;spacingLeft=3;spacingRight=3;strokeColor=none;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;html=1;" value="1..*" vertex="1">
+          <mxGeometry height="26" width="80" x="320" y="550" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+  <diagram id="UkCOalsH3ABp07oRDJuK" name="Página-2">
+    <mxGraphModel dx="1030" dy="622" grid="0" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="0" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
