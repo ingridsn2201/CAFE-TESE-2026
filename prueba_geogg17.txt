@@ -1,0 +1,8 @@
+PRUEBA DE GITHUB
+
+Usuario: geogg17
+Proyecto: CAFE-TESE-2026
+Rama: rama-geogg17
+
+Esta es una prueba para verificar
+que mis archivos se suben correctamente a GitHub.
