@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cafetería TESE - Inicio de Sesión y Registro</title>
+  <style>
+    :root {
+      --verde-tese: #145a32;
+      --verde-hover: #0e4224;
+      --verde-claro: #e9f5ee;
+      --gris-fondo: #f5f7f6;
+      --borde: #dce3df;
+      --texto: #1e2923;
+      --subtexto: #5a6b61;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+    body {
+      background: var(--gris-fondo);
+      color: var(--texto);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+    }
+    header {
+      background: var(--verde-tese);
+      color: #fff;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .brand { font-weight: 700; font-size: 1.15rem; display: flex; align-items: center; gap: 8px; }
+    .link-volver {
+      color: #fff;
+      text-decoration: none;
+      font-size: 0.9rem;
+      background: rgba(255,255,255,0.15);
+      padding: 6px 12px;
+      border-radius: 8px;
+    }
+    .main-wrap {
+      flex: 1;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      padding: 24px 16px;
+    }
+    .auth-card {
+      background: #fff;
+      border: 1px solid var(--borde);
+      border-radius: 16px;
+      width: 100%;
+      max-width: 430px;
+      padding: 24px;
+      box-shadow: 0 6px 18px rgba(0,0,0,0.04);
+    }
+    .logo-box {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-bottom: 16px;
+    }
+    .logo-icon {
+      width: 38px;
+      height: 38px;
+      background: var(--verde-tese);
+      color: #fff;
+      border-radius: 10px;
+      display: grid;
+      place-items: center;
+      font-size: 1.2rem;
+    }
+    h1 { font-size: 1.45rem; margin-bottom: 6px; }
+    .subtitle { color: var(--subtexto); font-size: 0.9rem; margin-bottom: 18px; }
+    .role-label { font-size: 0.88rem; font-weight: 600; margin-bottom: 8px; display: block; }
+    .role-selector {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      border: 1px solid var(--borde);
+      border-radius: 10px;
+      overflow: hidden;
+      margin-bottom: 8px;
+    }
+    .role-btn {
+      padding: 10px;
+      border: none;
+      background: #fff;
+      cursor: pointer;
+      font-weight: 600;
+      color: var(--subtexto);
+      transition: 0.15s;
+    }
+    .role-btn.active {
+      background: var(--verde-claro);
+      color: var(--verde-tese);
+    }
+    .role-hint { font-size: 0.82rem; color: var(--subtexto); margin-bottom: 16px; }
+    .field { margin-bottom: 14px; }
+    .field label { display: block; font-size: 0.86rem; font-weight: 600; margin-bottom: 5px; }
+    .field input {
+      width: 100%;
+      padding: 10px 12px;
+      border: 1px solid var(--borde);
+      border-radius: 10px;
+      font-size: 0.95rem;
+    }
+    .field input:focus { outline: none; border-color: var(--verde-tese); }
+    .btn-primary {
+      width: 100%;
+      background: var(--verde-tese);
+      color: #fff;
+      border: none;
+      border-radius: 10px;
+      padding: 11px;
+      font-size: 0.98rem;
+      font-weight: 600;
+      cursor: pointer;
+      margin-top: 4px;
+    }
+    .btn-primary:hover { background: var(--verde-hover); }
+    .switch-link {
+      text-align: center;
+      margin-top: 16px;
+      font-size: 0.88rem;
+      color: var(--subtexto);
+    }
+    .switch-link button {
+      background: none;
+      border: none;
+      color: var(--verde-tese);
+      font-weight: 700;
+      cursor: pointer;
+      text-decoration: underline;
+    }
+    .alert {
+      margin-top: 14px;
+      padding: 10px 12px;
+      border-radius: 10px;
+      font-size: 0.88rem;
+      display: none;
+    }
+    .alert.ok { display: block; background: #dcfce7; color: #166534; border: 1px solid #86efac; }
+    .alert.err { display: block; background: #fee2e2; color: #991b1b; border: 1px solid #fca5a5; }
+    .demo-creds {
+      margin-top: 16px;
+      padding-top: 12px;
+      border-top: 1px dashed var(--borde);
+      font-size: 0.8rem;
+      color: var(--subtexto);
+    }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">☕ Cafetería TESE</div>
+    <a class="link-volver" href="index.html">Ir al Catálogo →</a>
+  </header>
+
+  <div class="main-wrap">
+    <div class="auth-card">
+      <div class="logo-box">
+        <div class="logo-icon">☕</div>
+        <div>
+          <strong>Cafetería TESE</strong><br />
+          <small style="color:var(--subtexto);">Ordena con anticipación y disfruta sin filas</small>
+        </div>
+      </div>
+
+      <!-- FORMULARIO INICIO DE SESIÓN -->
+      <div id="formLogin">
+        <h1>Iniciar sesión</h1>
+        <p class="subtitle">Accede con tu cuenta institucional para preparar tu pedido anticipado.</p>
+
+        <span class="role-label">¿Cómo deseas ingresar?</span>
+        <div class="role-selector">
+          <button type="button" class="role-btn active" id="rolAlumno" onclick="seleccionarRol('alumno')">👤 Cliente (Alumno)</button>
+          <button type="button" class="role-btn" id="rolAdmin" onclick="seleccionarRol('admin')">🛡️ Administrador</button>
+        </div>
+        <p class="role-hint" id="textoRol">Alumnado puede ingresar para consultar menú y realizar pedidos.</p>
+
+        <form onsubmit="iniciarSesion(event)">
+          <div class="field">
+            <label for="loginCorreo">Correo institucional</label>
+            <input type="email" id="loginCorreo" placeholder="ejemplo@tese.edu.mx" required />
+          </div>
+          <div class="field">
+            <label for="loginPass">Contraseña</label>
+            <input type="password" id="loginPass" placeholder="••••••••" required />
+          </div>
+          <button type="submit" class="btn-primary">Iniciar sesión</button>
+        </form>
+
+        <div class="switch-link">
+          ¿No tienes una cuenta? <button type="button" onclick="mostrarRegistro(true)">Crear cuenta de cliente</button>
+        </div>
+      </div>
+
+      <!-- FORMULARIO REGISTRO -->
+      <div id="formRegistro" class="hidden">
+        <h1>Crear cuenta</h1>
+        <p class="subtitle">Registra una cuenta de alumno para comenzar con tus pedidos anticipados.</p>
+
+        <form onsubmit="registrarCuenta(event)">
+          <div class="field">
+            <label for="regNombre">Nombre completo</label>
+            <input type="text" id="regNombre" placeholder="Ej. Georgina García" required />
+          </div>
+          <div class="field">
+            <label for="regCorreo">Correo institucional</label>
+            <input type="email" id="regCorreo" placeholder="alumno@tese.edu.mx" required />
+          </div>
+          <div class="field">
+            <label for="regPass">Contraseña</label>
+            <input type="password" id="regPass" placeholder="Mínimo 6 caracteres" minlength="6" required />
+          </div>
+          <div class="field">
+            <label for="regPass2">Confirmar contraseña</label>
+            <input type="password" id="regPass2" placeholder="Repite tu contraseña" minlength="6" required />
+          </div>
+          <button type="submit" class="btn-primary">Crear cuenta</button>
+        </form>
+
+        <div class="switch-link">
+          ¿Ya tienes una cuenta? <button type="button" onclick="mostrarRegistro(false)">Iniciar sesión</button>
+        </div>
+      </div>
+
+      <div id="mensajeEstado" class="alert"></div>
+
+      <div class="demo-creds">
+        <strong>Cuentas de prueba rápida:</strong><br />
+        • Alumno: <code>alumno@tese.edu.mx</code> / <code>123456</code><br />
+        • Admin: <code>admin@tese.edu.mx</code> / <code>admin123</code>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    let rolSeleccionado = 'alumno';
+
+    const usuariosDemo = [
+      { nombre: 'Ingrid N.', correo: 'alumno@tese.edu.mx', pass: '123456', rol: 'alumno' },
+      { nombre: 'Personal Cafetería', correo: 'admin@tese.edu.mx', pass: 'admin123', rol: 'admin' }
+    ];
+
+    function seleccionarRol(rol) {
+      rolSeleccionado = rol;
+      document.getElementById('rolAlumno').classList.toggle('active', rol === 'alumno');
+      document.getElementById('rolAdmin').classList.toggle('active', rol === 'admin');
+      document.getElementById('textoRol').textContent = rol === 'alumno'
+        ? 'Alumnado puede ingresar para consultar menú y realizar pedidos.'
+        : 'Personal autorizado de cafetería para gestionar catálogo y estados de pedidos.';
+      limpiarMensaje();
+    }
+
+    function mostrarRegistro(verRegistro) {
+      document.getElementById('formLogin').classList.toggle('hidden', verRegistro);
+      document.getElementById('formRegistro').classList.toggle('hidden', !verRegistro);
+      limpiarMensaje();
+    }
+
+    function mostrarMensaje(texto, esOk) {
+      const box = document.getElementById('mensajeEstado');
+      box.textContent = texto;
+      box.className = 'alert ' + (esOk ? 'ok' : 'err');
+    }
+
+    function limpiarMensaje() {
+      const box = document.getElementById('mensajeEstado');
+      box.className = 'alert';
+      box.textContent = '';
+    }
+
+    function iniciarSesion(e) {
+      e.preventDefault();
+      const correo = document.getElementById('loginCorreo').value.trim().toLowerCase();
+      const pass = document.getElementById('loginPass').value;
+
+      const user = usuariosDemo.find(u => u.correo === correo && u.pass === pass);
+      if (!user) {
+        mostrarMensaje('Correo o contraseña incorrectos.', false);
+        return;
+      }
+      if (user.rol !== rolSeleccionado) {
+        mostrarMensaje(`Esta cuenta pertenece al rol "${user.rol}". Cambia el selector superior.`, false);
+        return;
+      }
+
+      mostrarMensaje(`¡Bienvenido(a), ${user.nombre}! Sesión iniciada como ${user.rol.toUpperCase()}.`, true);
+    }
+
+    function registrarCuenta(e) {
+      e.preventDefault();
+      const nombre = document.getElementById('regNombre').value.trim();
+      const correo = document.getElementById('regCorreo').value.trim().toLowerCase();
+      const pass = document.getElementById('regPass').value;
+      const pass2 = document.getElementById('regPass2').value;
+
+      if (pass !== pass2) {
+        mostrarMensaje('Las contraseñas no coinciden.', false);
+        return;
+      }
+      if (usuariosDemo.some(u => u.correo === correo)) {
+        mostrarMensaje('Ese correo institucional ya está registrado.', false);
+        return;
+      }
+
+      usuariosDemo.push({ nombre, correo, pass, rol: 'alumno' });
+      mostrarRegistro(false);
+      seleccionarRol('alumno');
+      document.getElementById('loginCorreo').value = correo;
+      mostrarMensaje(`Cuenta creada para ${nombre}. Ya puedes iniciar sesión.`, true);
+    }
+  </script>
+</body>
+</html>
