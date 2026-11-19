@@ -1,0 +1,459 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cafetería TESE - Sistema de Pedidos Anticipados</title>
+  <style>
+    :root {
+      --verde-tese: #145a32;
+      --verde-claro: #e9f5ee;
+      --amarillo: #e69d00;
+      --gris-fondo: #f5f7f6;
+      --borde: #dce3df;
+      --texto: #1e2923;
+      --subtexto: #5a6b61;
+    }
+    * { box-sizing: border-box; margin: 0; padding: 0; font-family: system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+    body { background: var(--gris-fondo); color: var(--texto); }
+    header {
+      background: var(--verde-tese);
+      color: #fff;
+      padding: 14px 20px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 10px;
+    }
+    .brand { font-weight: 700; font-size: 1.15rem; display: flex; align-items: center; gap: 8px; }
+    .tabs { display: flex; gap: 8px; }
+    .tab-btn {
+      background: rgba(255,255,255,0.15);
+      border: 1px solid rgba(255,255,255,0.3);
+      color: #fff;
+      padding: 7px 14px;
+      border-radius: 8px;
+      cursor: pointer;
+      font-weight: 600;
+    }
+    .tab-btn.active { background: #fff; color: var(--verde-tese); }
+    .container { max-width: 1100px; margin: 20px auto; padding: 0 16px; }
+    .card {
+      background: #fff;
+      border: 1px solid var(--borde);
+      border-radius: 12px;
+      padding: 16px;
+      margin-bottom: 16px;
+    }
+    .grid-alumno { display: grid; grid-template-columns: 2fr 1fr; gap: 16px; }
+    @media (max-width: 800px) { .grid-alumno { grid-template-columns: 1fr; } }
+    .filtros { display: flex; gap: 8px; flex-wrap: wrap; margin: 12px 0; }
+    .chip {
+      border: 1px solid var(--borde);
+      background: #fff;
+      padding: 6px 12px;
+      border-radius: 20px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    .chip.active { background: var(--verde-claro); border-color: var(--verde-tese); color: var(--verde-tese); font-weight: 600; }
+    input[type="text"], input[type="number"], select {
+      width: 100%;
+      padding: 9px 12px;
+      border: 1px solid var(--borde);
+      border-radius: 8px;
+      font-size: 0.95rem;
+    }
+    .productos-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+    .prod-card {
+      border: 1px solid var(--borde);
+      border-radius: 10px;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      gap: 8px;
+    }
+    .prod-header { display: flex; justify-content: space-between; align-items: start; gap: 6px; }
+    .precio { color: var(--verde-tese); font-weight: 700; }
+    .badge {
+      display: inline-block;
+      padding: 2px 8px;
+      border-radius: 12px;
+      font-size: 0.78rem;
+      font-weight: 600;
+    }
+    .disp-ok { background: #dcfce7; color: #166534; }
+    .disp-no { background: #fee2e2; color: #991b1b; }
+    .btn {
+      border: none;
+      border-radius: 8px;
+      padding: 9px 12px;
+      font-weight: 600;
+      cursor: pointer;
+    }
+    .btn-primary { background: var(--verde-tese); color: #fff; width: 100%; }
+    .btn-amarillo { background: var(--amarillo); color: #fff; width: 100%; }
+    .btn:disabled { background: #cbd5e1; cursor: not-allowed; }
+    .carrito-item {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 8px 0;
+      border-bottom: 1px solid var(--borde);
+      gap: 8px;
+    }
+    .qty-btn { padding: 2px 8px; border: 1px solid var(--borde); background: #fff; border-radius: 6px; cursor: pointer; }
+    .nota-efectivo {
+      background: #fef3c7;
+      color: #92400e;
+      padding: 8px 10px;
+      border-radius: 8px;
+      font-size: 0.85rem;
+      margin: 10px 0;
+    }
+    .estado-pill {
+      padding: 3px 10px;
+      border-radius: 12px;
+      font-size: 0.8rem;
+      font-weight: 700;
+      background: var(--verde-claro);
+      color: var(--verde-tese);
+    }
+    table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+    th, td { text-align: left; padding: 10px 8px; border-bottom: 1px solid var(--borde); font-size: 0.92rem; }
+    .hidden { display: none; }
+  </style>
+</head>
+<body>
+  <header>
+    <div class="brand">☕ Cafetería TESE — Pedidos Anticipados</div>
+    <div class="tabs">
+      <button class="tab-btn active" id="btnVistaAlumno" onclick="cambiarVista('alumno')">Módulo Alumno</button>
+      <button class="tab-btn" id="btnVistaAdmin" onclick="cambiarVista('admin')">Módulo Administrativo</button>
+    </div>
+  </header>
+
+  <div class="container">
+    <!-- VISTA ALUMNO -->
+    <section id="vistaAlumno">
+      <div class="grid-alumno">
+        <div>
+          <div class="card">
+            <h2>Catálogo de productos</h2>
+            <p style="color:var(--subtexto); font-size:0.9rem; margin-bottom:10px;">Consulta disponibilidad y arma tu pedido anticipado.</p>
+            <input type="text" id="buscador" placeholder="Buscar alimentos o bebidas..." oninput="renderCatalogo()" />
+            <div class="filtros" id="filtrosCat"></div>
+            <div class="productos-grid" id="gridProductos"></div>
+          </div>
+        </div>
+
+        <div>
+          <div class="card">
+            <h3>Mi carrito</h3>
+            <div id="listaCarrito" style="margin-top:10px;"></div>
+            <div style="display:flex; justify-content:space-between; margin-top:12px; font-weight:700; font-size:1.1rem;">
+              <span>Total:</span>
+              <span id="totalCarrito">$0.00</span>
+            </div>
+            <div class="nota-efectivo">
+              💵 El pago se realizará en efectivo al recoger el pedido en cafetería.
+            </div>
+            <button class="btn btn-primary" id="btnConfirmar" onclick="confirmarPedido()" disabled>Confirmar pedido</button>
+          </div>
+
+          <div class="card">
+            <h3>Seguimiento de mis pedidos</h3>
+            <div id="seguimientoAlumno" style="margin-top:10px; font-size:0.92rem; color:var(--subtexto);">
+              Aún no has confirmado pedidos en esta sesión.
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- VISTA ADMINISTRADOR -->
+    <section id="vistaAdmin" class="hidden">
+      <div class="card">
+        <h2>Panel Administrativo — Gestión de Pedidos</h2>
+        <p style="color:var(--subtexto); font-size:0.9rem;">Actualiza el estado de preparación y entrega (se refleja en tiempo real al alumno).</p>
+        <table>
+          <thead>
+            <tr>
+              <th>Folio</th>
+              <th>Detalle</th>
+              <th>Total</th>
+              <th>Estado actual</th>
+              <th>Acción</th>
+            </tr>
+          </thead>
+          <tbody id="tablaPedidosAdmin"></tbody>
+        </table>
+      </div>
+
+      <div class="card">
+        <h2>Control de Disponibilidad del Catálogo</h2>
+        <table>
+          <thead>
+            <tr>
+              <th>Producto</th>
+              <th>Categoría</th>
+              <th>Precio</th>
+              <th>Stock</th>
+              <th>Estado</th>
+              <th>Disponibilidad</th>
+            </tr>
+          </thead>
+          <tbody id="tablaProductosAdmin"></tbody>
+        </table>
+      </div>
+    </section>
+  </div>
+
+  <script>
+    const categorias = ['Todos', 'Desayunos', 'Comidas', 'Bebidas', 'Snacks', 'Postres'];
+    let categoriaActiva = 'Todos';
+
+    let productos = [
+      { id: 'P1', nombre: 'Torta de huevo', desc: 'Bolillo con huevo preparado y salsa de la casa.', precio: 32, cat: 'Desayunos', stock: 12, disp: true },
+      { id: 'P2', nombre: 'Chilaquiles verdes', desc: 'Totopos con salsa verde, crema, queso y frijoles.', precio: 48, cat: 'Desayunos', stock: 8, disp: true },
+      { id: 'P3', nombre: 'Enchiladas', desc: 'Orden de enchiladas con pollo y guarnición.', precio: 55, cat: 'Comidas', stock: 6, disp: true },
+      { id: 'P4', nombre: 'Agua de jamaica', desc: 'Bebida fresca de temporada en vaso mediano.', precio: 18, cat: 'Bebidas', stock: 20, disp: true },
+      { id: 'P5', nombre: 'Café americano', desc: 'Café caliente preparado al momento.', precio: 22, cat: 'Bebidas', stock: 18, disp: true },
+      { id: 'P6', nombre: 'Sandwich integral', desc: 'Pan integral con jamón, queso, lechuga y jitomate.', precio: 36, cat: 'Snacks', stock: 0, disp: false },
+      { id: 'P7', nombre: 'Gelatina', desc: 'Postre individual preparado para consumo rápido.', precio: 15, cat: 'Postres', stock: 10, disp: true }
+    ];
+
+    let carrito = [];
+    let pedidos = [];
+    let contadorFolio = 1;
+
+    function cambiarVista(vista) {
+      document.getElementById('vistaAlumno').classList.toggle('hidden', vista !== 'alumno');
+      document.getElementById('vistaAdmin').classList.toggle('hidden', vista !== 'admin');
+      document.getElementById('btnVistaAlumno').classList.toggle('active', vista === 'alumno');
+      document.getElementById('btnVistaAdmin').classList.toggle('active', vista === 'admin');
+      renderTodo();
+    }
+
+    function renderFiltros() {
+      const cont = document.getElementById('filtrosCat');
+      cont.innerHTML = categorias.map(c =>
+        `<button class="chip ${c === categoriaActiva ? 'active' : ''}" onclick="seleccionarCat('${c}')">${c}</button>`
+      ).join('');
+    }
+
+    function seleccionarCat(cat) {
+      categoriaActiva = cat;
+      renderFiltros();
+      renderCatalogo();
+    }
+
+    function renderCatalogo() {
+      const q = document.getElementById('buscador').value.toLowerCase();
+      const filtrados = productos.filter(p =>
+        (categoriaActiva === 'Todos' || p.cat === categoriaActiva) &&
+        p.nombre.toLowerCase().includes(q)
+      );
+
+      document.getElementById('gridProductos').innerHTML = filtrados.map(p => {
+        const disponible = p.disp && p.stock > 0;
+        return `
+          <div class="prod-card">
+            <div>
+              <div class="prod-header">
+                <strong>${p.nombre}</strong>
+                <span class="precio">$${p.precio.toFixed(2)}</span>
+              </div>
+              <p style="font-size:0.84rem; color:var(--subtexto); margin:6px 0;">${p.desc}</p>
+              <span class="badge ${disponible ? 'disp-ok' : 'disp-no'}">
+                ${disponible ? `Disponible (${p.stock})` : 'Agotado'}
+              </span>
+            </div>
+            <button class="btn btn-amarillo" ${disponible ? '' : 'disabled'} onclick="agregarCarrito('${p.id}')">
+              ${disponible ? '+ Agregar' : 'Agotado'}
+            </button>
+          </div>
+        `;
+      }).join('');
+    }
+
+    function agregarCarrito(id) {
+      const prod = productos.find(p => p.id === id);
+      if (!prod || !prod.disp || prod.stock <= 0) return;
+
+      const existente = carrito.find(item => item.id === id);
+      if (existente) {
+        if (existente.cant < prod.stock) existente.cant++;
+      } else {
+        carrito.push({ id: prod.id, nombre: prod.nombre, precio: prod.precio, cant: 1 });
+      }
+      renderCarrito();
+    }
+
+    function cambiarCant(id, delta) {
+      const item = carrito.find(i => i.id === id);
+      const prod = productos.find(p => p.id === id);
+      if (!item || !prod) return;
+
+      item.cant += delta;
+      if (item.cant <= 0) {
+        carrito = carrito.filter(i => i.id !== id);
+      } else if (item.cant > prod.stock) {
+        item.cant = prod.stock;
+      }
+      renderCarrito();
+    }
+
+    function renderCarrito() {
+      const cont = document.getElementById('listaCarrito');
+      if (carrito.length === 0) {
+        cont.innerHTML = '<p style="color:var(--subtexto); font-size:0.9rem;">Tu carrito está vacío.</p>';
+        document.getElementById('totalCarrito').textContent = '$0.00';
+        document.getElementById('btnConfirmar').disabled = true;
+        return;
+      }
+
+      let total = 0;
+      cont.innerHTML = carrito.map(i => {
+        const sub = i.precio * i.cant;
+        total += sub;
+        return `
+          <div class="carrito-item">
+            <div>
+              <strong>${i.nombre}</strong><br/>
+              <small>$${i.precio.toFixed(2)} c/u • Subtotal: $${sub.toFixed(2)}</small>
+            </div>
+            <div>
+              <button class="qty-btn" onclick="cambiarCant('${i.id}', -1)">-</button>
+              <span style="margin:0 6px;">${i.cant}</span>
+              <button class="qty-btn" onclick="cambiarCant('${i.id}', 1)">+</button>
+            </div>
+          </div>
+        `;
+      }).join('');
+
+      document.getElementById('totalCarrito').textContent = `$${total.toFixed(2)}`;
+      document.getElementById('btnConfirmar').disabled = false;
+    }
+
+    function confirmarPedido() {
+      if (carrito.length === 0) return;
+
+      // Validar disponibilidad antes de confirmar (Regla de negocio)
+      for (const item of carrito) {
+        const prod = productos.find(p => p.id === item.id);
+        if (!prod || !prod.disp || prod.stock < item.cant) {
+          alert(`Sin stock suficiente para ${item.nombre}`);
+          return;
+        }
+      }
+
+      // Descontar stock
+      let total = 0;
+      const detalle = carrito.map(item => {
+        const prod = productos.find(p => p.id === item.id);
+        prod.stock -= item.cant;
+        if (prod.stock === 0) prod.disp = false;
+        total += item.precio * item.cant;
+        return `${item.cant}x ${item.nombre}`;
+      });
+
+      const folio = `#TESE-${String(contadorFolio++).padStart(3, '0')}`;
+      pedidos.unshift({
+        folio,
+        detalle: detalle.join(', '),
+        total,
+        estado: 'Recibido'
+      });
+
+      carrito = [];
+      renderTodo();
+      alert(`¡Pedido ${folio} registrado! Paga $${total.toFixed(2)} en efectivo al recoger.`);
+    }
+
+    function avanzarEstado(folio) {
+      const flujo = ['Recibido', 'En preparación', 'Listo', 'Entregado'];
+      const ped = pedidos.find(p => p.folio === folio);
+      if (!ped) return;
+      const idx = flujo.indexOf(ped.estado);
+      if (idx >= 0 && idx < flujo.length - 1) {
+        ped.estado = flujo[idx + 1];
+        renderTodo();
+      }
+    }
+
+    function toggleDisp(id) {
+      const prod = productos.find(p => p.id === id);
+      if (!prod) return;
+      prod.disp = !prod.disp;
+      if (prod.disp && prod.stock === 0) prod.stock = 5;
+      renderTodo();
+    }
+
+    function renderSeguimiento() {
+      const cont = document.getElementById('seguimientoAlumno');
+      if (pedidos.length === 0) {
+        cont.innerHTML = 'Aún no has confirmado pedidos en esta sesión.';
+        return;
+      }
+      cont.innerHTML = pedidos.map(p => `
+        <div style="padding:8px 0; border-bottom:1px solid var(--borde);">
+          <div style="display:flex; justify-content:space-between;">
+            <strong>${p.folio}</strong>
+            <span class="estado-pill">${p.estado}</span>
+          </div>
+          <div style="font-size:0.85rem; margin-top:4px;">${p.detalle} — <strong>$${p.total.toFixed(2)}</strong></div>
+        </div>
+      `).join('');
+    }
+
+    function renderAdmin() {
+      const tbodyPed = document.getElementById('tablaPedidosAdmin');
+      if (pedidos.length === 0) {
+        tbodyPed.innerHTML = '<tr><td colspan="5" style="color:var(--subtexto);">No hay pedidos registrados aún. Genera uno desde el Módulo Alumno.</td></tr>';
+      } else {
+        tbodyPed.innerHTML = pedidos.map(p => `
+          <tr>
+            <td><strong>${p.folio}</strong></td>
+            <td>${p.detalle}</td>
+            <td>$${p.total.toFixed(2)}</td>
+            <td><span class="estado-pill">${p.estado}</span></td>
+            <td>
+              <button class="btn btn-primary" style="width:auto; padding:5px 10px;"
+                ${p.estado === 'Entregado' ? 'disabled' : ''}
+                onclick="avanzarEstado('${p.folio}')">
+                ${p.estado === 'Entregado' ? 'Completado' : 'Siguiente estado →'}
+              </button>
+            </td>
+          </tr>
+        `).join('');
+      }
+
+      document.getElementById('tablaProductosAdmin').innerHTML = productos.map(p => `
+        <tr>
+          <td>${p.nombre}</td>
+          <td>${p.cat}</td>
+          <td>$${p.precio.toFixed(2)}</td>
+          <td>${p.stock}</td>
+          <td><span class="badge ${p.disp ? 'disp-ok' : 'disp-no'}">${p.disp ? 'Disponible' : 'Agotado'}</span></td>
+          <td>
+            <button class="chip" onclick="toggleDisp('${p.id}')">Cambiar estado</button>
+          </td>
+        </tr>
+      `).join('');
+    }
+
+    function renderTodo() {
+      renderFiltros();
+      renderCatalogo();
+      renderCarrito();
+      renderSeguimiento();
+      renderAdmin();
+    }
+
+    renderTodo();
+  </script>
+</body>
+</html>
