@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Proyecto de Aplicación para la Cafetería del Tecnológico de Estudios Superiores de Ecatepec (TESE)" company="" webLink="http://" view-date="2026-09-21" view-index="0" gantt-divider-location="693" resource-divider-location="300" version="3.3.3316" locale="es_ES">
+    <description/>
+    <view zooming-state="default:7" id="gantt-chart">
+        <field id="tpd3" name="Nombre" width="532" order="0"/>
+        <field id="tpd4" name="Fecha de inicio" width="70" order="1"/>
+        <field id="tpd5" name="Fecha de fin" width="75" order="2"/>
+        <field id="tpd15" name="Notas" width="20" order="3"/>
+        <option id="filter.completedTasks" value="false"/>
+        <option id="filter.dueTodayTasks" value="false"/>
+        <option id="filter.overdueTasks" value="false"/>
+        <option id="filter.inProgressTodayTasks" value="false"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nombre" width="210" order="0"/>
+        <field id="1" name="Función" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="0" mon="0" tue="0" wed="0" thu="0" fri="0" sat="0"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="0" uid="afb29be8b61b43fea41de94adc0a7b0e" name="A.  Realizar la reunión inicial y definir la visión general del producto." meeting="false" start="2026-09-09" duration="3" complete="0" expand="true"/>
+        <task id="1" uid="0e3cec34ceb84f85b4030157e307a566" name="B. Definir el alcance, los objetivos y las restricciones del proyecto." meeting="false" start="2026-09-12" duration="4" complete="0" expand="true"/>
+        <task id="2" uid="a8e097f12fe5468c82549857ab0ee0d5" name="C1.  Diseñar, aplicar y analizar la encuesta dirigida al alumnado." meeting="false" start="2026-09-12" duration="7" complete="0" expand="true"/>
+        <task id="3" uid="379e04bdf537425197caa7ed9713c1ce" name="C2.  Identificar las necesidades operativas y las reglas de funcionamiento de la cafetería." meeting="false" start="2026-09-12" duration="6" complete="0" expand="true"/>
+        <task id="5" uid="7dcc57d7ab124fc09166e213a39d12f8" name="D.  Integrar y priorizar los requisitos y funcionalidades del producto (Product Backlog)." meeting="false" start="2026-09-20" duration="3" complete="0" expand="true"/>
+        <task id="6" uid="51481b216cb847f8af4efd4cd7c793af" name="E.  Estimar las actividades y planificar los Sprints de desarrollo." meeting="false" start="2026-09-23" duration="4" complete="0" expand="true"/>
+        <task id="7" uid="6c5a680566154363ba8b96d4e8b8e904" name="F1.  Diseñar las interfaces, la navegación y la experiencia de usuario de la aplicación." meeting="false" start="2026-09-27" duration="10" complete="0" expand="true"/>
+        <task id="8" uid="a6b923277fdc47f4ac150c3a507fa495" name="F2.  Definir la arquitectura del sistema, el modelo de datos y la seguridad de Firebase." meeting="false" start="2026-09-27" duration="8" complete="0" expand="true"/>
+        <task id="9" uid="aaa4a8ae2624469c98ccbf0d40fe4238" name="G.  Revisar y validar el diseño, el prototipo y la arquitectura propuesta." meeting="false" start="2026-09-07" duration="6" complete="0" expand="true"/>
+        <task id="10" uid="3e9ab6244a6f4607b63e2c501fa9e3ac" name="H1. Desarrollar el módulo de autenticación de usuarios y consulta del catálogo de productos." meeting="false" start="2026-10-13" duration="14" complete="0" expand="true"/>
+        <task id="11" uid="4d6e1b5e19e74793af4cd6d6cf93a571" name="H2.  Desarrollar el carrito de compras, la confirmación y el seguimiento de pedidos." meeting="false" start="2026-10-13" duration="12" complete="0" expand="true"/>
+        <task id="12" uid="785dac69255f4a21b450892c86e9e880" name="H3.  Desarrollar el módulo administrativo para gestionar productos y pedidos." meeting="false" start="2026-09-13" duration="11" complete="0" expand="true"/>
+        <task id="13" uid="cb8bdd07404144499203ff895cddc753" name="I.  Integrar los módulos de la aplicación con los servicios de Firebase." meeting="false" start="2026-10-27" duration="11" complete="0" expand="true"/>
+        <task id="14" uid="f2f51400564e4554ae85ca73f79fa156" name="J.  Ejecutar pruebas funcionales y de integración para verificar el funcionamiento del sistema." meeting="false" start="2026-09-07" duration="12" complete="0" expand="true"/>
+        <task id="15" uid="582856a4088a4e55900ec6480e109593" name="K.  Revisar el incremento desarrollado y realizar la retrospectiva del equipo." meeting="false" start="2026-11-19" duration="3" complete="0" expand="true"/>
+        <task id="16" uid="3e1095b972ec49fdaa187f3d5dd5f84e" name="L.  Corregir los errores detectados y verificar el cumplimiento de los criterios de aceptación." meeting="false" start="2026-11-22" duration="5" complete="0" expand="true"/>
+        <task id="17" uid="edd99bced6e646c1995a2ac7a677ca87" name="M.  Preparar la versión final de la aplicación y completar la documentación del proyecto." meeting="false" start="2026-11-27" duration="4" complete="0" expand="true"/>
+        <task id="18" uid="ba2d1e0582fe49ffb3ddc19c995af22e" name="N. Realizar la documentación final y lanzamiento (demostración) del proyecto." meeting="true" start="2026-12-01" duration="0" complete="0" expand="true"/>
+    </tasks>
+    <resources>
+        <resource id="3" name="Cayetano Modesto Aracely." function="Default:0" contacts="aracelymodesto2021@hotmail.com" phone="5563766489"/>
+        <resource id="2" name="Escamilla Encinas Omar " function="Default:0" contacts="" phone="5625987721"/>
+        <resource id="0" name="García González Georgina" function="Default:0" contacts="geo01gar1@gmail.com" phone="5574835242"/>
+        <resource id="4" name="Gómez Medina Daniela." function="Default:0" contacts="danydans375@gmail.com" phone="5511773900"/>
+        <resource id="5" name="Luna García Christian Agustín" function="Default:0" contacts="lunagarciachristianagustin@gmail.com" phone="5573761112"/>
+        <resource id="1" name="Sánchez Nicanor Ingrid Natalia" function="Default:1" contacts="ingridsn2201@gmail.com" phone="5516447723"/>
+    </resources>
+    <allocations>
+        <allocation task-id="5" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="1" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="12" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="15" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="17" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="0" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="18" resource-id="3" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="10" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="13" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="6" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="15" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="17" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="0" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="18" resource-id="2" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="7" resource-id="0" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="9" resource-id="0" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="11" resource-id="0" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="15" resource-id="0" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="17" resource-id="0" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="0" resource-id="0" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="18" resource-id="0" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="13" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="2" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="14" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="15" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="17" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="0" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="18" resource-id="4" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="10" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="8" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="3" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="15" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="17" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="0" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="18" resource-id="5" function="Default:0" responsible="false" load="100.0"/>
+        <allocation task-id="15" resource-id="1" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="17" resource-id="1" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="11" resource-id="1" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="0" resource-id="1" function="Default:1" responsible="false" load="100.0"/>
+        <allocation task-id="18" resource-id="1" function="Default:1" responsible="false" load="100.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
