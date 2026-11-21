@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+
+<html lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>APP CAFETESE | Omar</title>
+<style>
+:root{--ink:#202b25;--muted:#66736b;--cream:#f7f5ef;--paper:#fff;--green:#245c43;--mint:#e8f1e9;--orange:#e9a34b;--line:#e4e8e2;--red:#a94338;--shadow:0 12px 34px rgba(27,49,36,.08)}
+*{box-sizing:border-box}body{margin:0;background:var(--cream);color:var(--ink);font:15px/1.55 Inter,ui-sans-serif,system-ui,-apple-system,Segoe UI,Arial}
+header{background:#173d2c;color:white;padding:30px max(22px,calc((100% - 1160px)/2));position:relative;overflow:hidden}
+header:after{content:"";position:absolute;width:360px;height:360px;border:1px solid #ffffff20;border-radius:50%;right:8%;top:-240px;box-shadow:0 0 0 35px #ffffff0c,0 0 0 70px #ffffff08}
+.eyebrow{text-transform:uppercase;letter-spacing:.16em;font-size:11px;color:#c7dfce;font-weight:800}
+h1{font-size:clamp(27px,4vw,42px);line-height:1.1;margin:10px 0 9px;max-width:700px}
+header p{color:#d8e7dc;margin:0;max-width:680px}
+.shell{max-width:1160px;margin:28px auto;padding:0 22px}
+.tabs{display:flex;gap:10px;flex-wrap:wrap;margin-bottom:22px}
+.tab{border:1px solid var(--line);background:white;color:var(--ink);padding:12px 18px;border-radius:12px;font-weight:800;cursor:pointer}
+.tab.active{background:var(--green);border-color:var(--green);color:white}
+.panel{display:none}.panel.active{display:block}
+.hero{display:flex;justify-content:space-between;gap:20px;align-items:flex-start;margin:10px 0 22px}
+.hero h2{font-size:28px;margin:0 0 4px}.hero p{margin:0;color:var(--muted);max-width:720px}
+.pill{display:inline-flex;align-items:center;border-radius:99px;background:var(--mint);color:var(--green);padding:6px 11px;font-size:12px;font-weight:800;white-space:nowrap}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:17px;padding:19px;box-shadow:var(--shadow)}
+.span-8{grid-column:span 8}.span-4{grid-column:span 4}.span-6{grid-column:span 6}.span-12{grid-column:span 12}
+.card h3{margin:0 0 12px;font-size:17px}.muted{color:var(--muted)}.small{font-size:12px;color:var(--muted)}
+.steps{display:flex;gap:8px;flex-wrap:wrap;align-items:center}
+.step{background:#f4f7f3;border:1px solid var(--line);border-radius:11px;padding:10px 12px;flex:1;min-width:115px}
+.step b{display:block;color:var(--green);font-size:12px}.arrow{color:#93a197;font-weight:900}
+ul.clean{padding-left:19px;margin:8px 0}ul.clean li{margin:7px 0}
+.phone-wrap{display:flex;justify-content:center;padding:8px}
+.phone{width:290px;border:8px solid #26332b;border-radius:29px;background:#fafbf8;overflow:hidden;box-shadow:0 12px 30px #18281e20}
+.phone-top{height:22px;background:#26332b}.phone-head{background:var(--green);color:white;padding:17px}.phone-head b{font-size:17px}.phone-body{padding:15px}
+.field{margin:10px 0}.field label{display:block;font-size:11px;color:var(--muted);font-weight:800;margin-bottom:4px}.fake-input{background:white;border:1px solid #dfe5dd;border-radius:9px;padding:10px;font-size:13px}
+.item{display:flex;justify-content:space-between;gap:10px;padding:10px 0;border-bottom:1px solid var(--line);font-size:13px}
+.total{display:flex;justify-content:space-between;font-weight:900;padding:13px 0;font-size:16px}
+.cta{display:block;text-align:center;background:var(--green);color:white;border-radius:10px;padding:11px;font-weight:800;margin-top:10px}
+.status{display:flex;align-items:center;gap:9px;margin:12px 0}.dot{width:10px;height:10px;border-radius:50%;background:#cbd5cc}.done .dot{background:var(--green)}.current .dot{background:var(--orange);box-shadow:0 0 0 4px #f9ecd8}
+.status b{font-size:13px}.status small{display:block;color:var(--muted);font-size:11px}
+.table{width:100%;border-collapse:collapse;font-size:13px}.table th,.table td{text-align:left;padding:11px 9px;border-bottom:1px solid var(--line)}.table th{color:var(--muted);font-size:11px;text-transform:uppercase;letter-spacing:.06em}
+.tag{padding:4px 8px;border-radius:7px;background:#f1f3ef;font-size:11px;font-weight:800;white-space:nowrap}.tag.green{background:#e4f1e7;color:#28603f}.tag.orange{background:#fff0d9;color:#8b5b13}.tag.red{background:#fae8e5;color:#9b4037}
+.code{background:#18251e;color:#d9ebdd;border-radius:12px;padding:15px;overflow:auto;font:12px/1.6 ui-monospace,SFMono-Regular,Consolas,monospace;white-space:pre}
+.note{border-left:4px solid var(--orange);background:#fff8eb;padding:12px 14px;border-radius:8px;font-size:13px}
+.check{display:flex;gap:9px;margin:9px 0;align-items:flex-start}.check input{accent-color:var(--green);margin-top:4px}
+footer{max-width:1160px;margin:10px auto 35px;padding:0 22px;color:var(--muted);font-size:12px}
+@media(max-width:760px){.span-8,.span-4,.span-6{grid-column:span 12}.hero{display:block}.hero .pill{margin-top:12px}.table{min-width:560px}.table-wrap{overflow:auto}}
+</style>
+</head>
+<body>
+<header>
+<div class="eyebrow">APP CAFETESE · especificaciones funcionales</div>
+<h1>Flujo de pedidos: Omar</h1>
+<p>Especificaciones funcionales del módulo de pedidos para Omar, seguimiento de pedidos y administración en Flutter/Firebase.</p>
+</header>
+<main class="shell">
+
+<section class="panel active" id="omar">
+<div class="hero"><div><h2>Omar · Seguimiento y administración</h2><p>Responsable de consultar los pedidos, mostrar su progreso al estudiante y facilitar al administrador la revisión y actualización del estado.</p></div><span class="pill">Módulo estudiante + administrador</span></div>
+<div class="grid">
+<article class="card span-8">
+<h3>Flujo de estados del pedido</h3>
+<div class="steps">
+<div class="step"><b>01 · Recibido</b>Pedido registrado</div><span class="arrow">→</span>
+<div class="step"><b>02 · En preparación</b>Cocina lo prepara</div><span class="arrow">→</span>
+<div class="step"><b>03 · Listo</b>Puede recogerse</div><span class="arrow">→</span>
+<div class="step"><b>04 · Entregado</b>Pedido completado</div>
+</div>
+<p class="small">Estado alternativo: <span class="tag red">Cancelado</span>. Las transiciones permitidas deben definirse y validarse para evitar cambios inconsistentes.</p>
+</article>
+<article class="card span-4">
+<h3>Dos vistas conectadas</h3>
+<ul class="clean">
+<li><b>Estudiante:</b> consulta únicamente sus pedidos y su estado.</li>
+<li><b>Administrador:</b> consulta la lista de pedidos y actualiza estados según sus permisos.</li>
+<li><b>Actualización:</b> reflejar cambios en tiempo real con un listener de Firestore.</li>
+</ul>
+</article>
+<article class="card span-6">
+<h3>Vista de ejemplo · Seguimiento</h3>
+<div class="phone-wrap"><div class="phone">
+<div class="phone-top"></div>
+<div class="phone-head"><b>Estado de tu pedido</b><div class="small" style="color:#dce9df">Pedido #CAF-1042</div></div>
+<div class="phone-body">
+<div class="total"><span>Pedido</span><span>$89.00</span></div>
+<div class="status done"><span class="dot"></span><div><b>Pedido recibido</b><small>Tu pedido fue registrado</small></div></div>
+<div class="status current"><span class="dot"></span><div><b>En preparación</b><small>Estamos preparando tus alimentos</small></div></div>
+<div class="status"><span class="dot"></span><div><b>Listo para recoger</b><small>Te avisaremos cuando esté listo</small></div></div>
+<div class="status"><span class="dot"></span><div><b>Entregado</b><small>Pedido completado</small></div></div>
+<div class="field"><label>ESTADO ACTUAL</label><div class="fake-input">En preparación</div></div>
+</div>
+</div></div>
+</article>
+<article class="card span-6">
+<h3>Vista de ejemplo · Panel administrativo</h3>
+<div class="table-wrap"><table class="table">
+<thead><tr><th>Pedido</th><th>Hora</th><th>Total</th><th>Estado</th></tr></thead>
+<tbody>
+<tr><td>#1042</td><td>10:15</td><td>$89.00</td><td><span class="tag orange">Preparación</span></td></tr>
+<tr><td>#1043</td><td>10:19</td><td>$55.00</td><td><span class="tag green">Listo</span></td></tr>
+<tr><td>#1044</td><td>10:22</td><td>$32.00</td><td><span class="tag">Recibido</span></td></tr>
+<tr><td>#1045</td><td>10:27</td><td>$68.00</td><td><span class="tag red">Cancelado</span></td></tr>
+</tbody>
+</table></div>
+<p class="small">Datos ficticios para ilustrar la tabla. La pantalla real debe obtener los registros desde Firestore.</p>
+</article>
+<article class="card span-6">
+<h3>Consultas y operaciones</h3>
+<ul class="clean">
+<li>Escuchar los pedidos del usuario autenticado, ordenados por fecha.</li>
+<li>Consultar pedidos para el panel de administración.</li>
+<li>Filtrar por estado o fecha cuando sea necesario.</li>
+<li>Mostrar detalle: usuario, artículos, cantidades, total y hora.</li>
+<li>Actualizar estado y guardar la fecha de actualización.</li>
+<li>Refrescar la interfaz automáticamente cuando cambie el documento.</li>
+</ul>
+<div class="note">Seguridad: las reglas de Firestore deben permitir al estudiante leer solo sus propios pedidos. Solo administradores autorizados pueden consultar todos los pedidos y cambiar su estado.</div>
+</article>
+<article class="card span-6">
+<h3>Archivos Flutter sugeridos</h3>
+<div class="code">features/
+└── orders/
+    ├── data/
+    │   └── order_repository.dart
+    ├── logic/
+    │   └── order_tracking_controller.dart
+    └── presentation/
+        ├── order_tracking_screen.dart
+        └── admin_orders_screen.dart</div>
+<h3 style="margin-top:18px">Criterios de aceptación</h3>
+<label class="check"><input type="checkbox"/> El estudiante solo visualiza sus propios pedidos.</label>
+<label class="check"><input type="checkbox"/> El estado se actualiza sin recargar manualmente.</label>
+<label class="check"><input type="checkbox"/> El administrador visualiza los pedidos disponibles para su gestión.</label>
+<label class="check"><input type="checkbox"/> Los cambios de estado se guardan en Firestore.</label>
+<label class="check"><input type="checkbox"/> Los permisos impiden cambios realizados por usuarios no autorizados.</label>
+</article>
+<article class="card span-12">
+<h3>Modelo compartido de estados</h3>
+<div class="code">enum OrderStatus {
+  recibido,
+  enPreparacion,
+  listo,
+  entregado,
+  cancelado,
+}
+
+// Valores persistidos en Firestore:
+// "recibido"
+// "en_preparacion"
+// "listo"
+// "entregado"
+// "cancelado"</div>
+<p class="small">Mantener exactamente los mismos valores en Flutter, Firestore y reglas/backend. Evitar que cada integrante invente etiquetas distintas.</p>
+</article>
+</div>
+</section>
+</main>
+<footer>APP CAFETESE · Propuesta de visualización técnica · Los nombres de campos, permisos y transiciones deben validarse contra el esquema real del proyecto Firebase y el documento oficial.</footer>
+</body>
+</html>
