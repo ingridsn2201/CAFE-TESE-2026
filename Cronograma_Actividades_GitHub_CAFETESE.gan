@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project name="CAFE-TESE-2026 - Cronograma de Actividades GitHub" company="Equipo Desarrollo CAFE-TESE" webLink="https://github.com/ingridsn2201/CAFE-TESE-2026" view-date="2026-10-20" view-index="0" gantt-divider-location="420" resource-divider-location="300" version="3.2.3247" locale="es_MX">
+    <description><![CDATA[Cronograma de actividades trabajadas por cada integrante del equipo en el repositorio GitHub ingridsn2201/CAFE-TESE-2026 (25 de octubre al 20 de noviembre de 2026).]]></description>
+    <view zooming-state="default:2" id="gantt-chart">
+        <field id="tpd3" name="Nombre" width="240" order="0"/>
+        <field id="tpd4" name="Fecha de inicio" width="90" order="1"/>
+        <field id="tpd5" name="Fecha de fin" width="90" order="2"/>
+        <option id="filter.completedTasks" value="false"/>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nombre" width="210" order="0"/>
+        <field id="1" name="Función" width="86" order="1"/>
+    </view>
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="0" mon="0" tue="0" wed="0" thu="0" fri="0" sat="0"/>
+            <only-show-weekends value="true"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+
+        <!-- 1. Christian Agustín Luna García -->
+        <task id="1" name="1. Christian Agustín Luna García (rama-christian-luna-garcia)" color="#1e3a8a" meeting="false" start="2026-10-27" duration="25" complete="100" expand="true">
+            <task id="101" name="Add architecture documentation for APP CAFETESE" color="#3b82f6" meeting="false" start="2026-10-27" duration="1" complete="100" expand="true"/>
+            <task id="102" name="Add DATA_MODEL.md for Firestore data structure" color="#3b82f6" meeting="false" start="2026-10-27" duration="1" complete="100" expand="true"/>
+            <task id="103" name="Add SECURITY.md for application security documentation" color="#3b82f6" meeting="false" start="2026-10-27" duration="1" complete="100" expand="true"/>
+            <task id="104" name="Aportación de Christian Luna" color="#3b82f6" meeting="false" start="2026-11-01" duration="1" complete="100" expand="true"/>
+            <task id="105" name="Creación de modelo_producto.dart" color="#3b82f6" meeting="false" start="2026-11-01" duration="1" complete="100" expand="true"/>
+            <task id="106" name="Actualiza modelo_producto.dart con la clase completa" color="#3b82f6" meeting="false" start="2026-11-01" duration="1" complete="100" expand="true"/>
+            <task id="107" name="Agrega pantalla de menu, main.dart y modelo de producto" color="#3b82f6" meeting="false" start="2026-11-01" duration="1" complete="100" expand="true"/>
+            <task id="108" name="Subiendo el diagrama de clases en drawio" color="#3b82f6" meeting="false" start="2026-11-03" duration="1" complete="100" expand="true"/>
+            <task id="109" name="Reporte de clase del 9/11/2026" color="#3b82f6" meeting="false" start="2026-11-09" duration="1" complete="100" expand="true"/>
+            <task id="110" name="Agrega evidencia semanal" color="#3b82f6" meeting="false" start="2026-11-18" duration="1" complete="100" expand="true"/>
+            <task id="111" name="Merge branch rama-christian-luna-garcia" color="#3b82f6" meeting="false" start="2026-11-18" duration="1" complete="100" expand="true"/>
+            <task id="112" name="Agrega constantes de Firestore" color="#3b82f6" meeting="false" start="2026-11-20" duration="1" complete="100" expand="true"/>
+        </task>
+
+        <!-- 2. Daniela Gómez Medina -->
+        <task id="2" name="2. Daniela Gómez Medina (rama-daniela)" color="#166534" meeting="false" start="2026-10-25" duration="27" complete="100" expand="true">
+            <task id="201" name="Daniela: encuestas y documentacion CAFETESE" color="#22c55e" meeting="false" start="2026-10-25" duration="1" complete="100" expand="true"/>
+            <task id="202" name="Daniela: agregada clase Producto en Dart" color="#22c55e" meeting="false" start="2026-11-04" duration="1" complete="100" expand="true"/>
+            <task id="203" name="Ejercicio 3: clase Producto y prueba de descuento" color="#22c55e" meeting="false" start="2026-11-04" duration="1" complete="100" expand="true"/>
+            <task id="204" name="Crear carpeta de actividades CAFETESE" color="#22c55e" meeting="false" start="2026-11-04" duration="1" complete="100" expand="true"/>
+            <task id="205" name="Add files via upload (commit 94584f7)" color="#22c55e" meeting="false" start="2026-11-04" duration="1" complete="100" expand="true"/>
+            <task id="206" name="Aportación de Daniela" color="#22c55e" meeting="false" start="2026-11-04" duration="1" complete="100" expand="true"/>
+            <task id="207" name="Merge origin/rama-daniela into entrega-daniela (04/11)" color="#22c55e" meeting="false" start="2026-11-04" duration="1" complete="100" expand="true"/>
+            <task id="208" name="Add files via upload (commit be897e1)" color="#22c55e" meeting="false" start="2026-11-04" duration="1" complete="100" expand="true"/>
+            <task id="209" name="Add files via upload (commit 891fbcb)" color="#22c55e" meeting="false" start="2026-11-04" duration="1" complete="100" expand="true"/>
+            <task id="210" name="Add files via upload (09/11)" color="#22c55e" meeting="false" start="2026-11-09" duration="1" complete="100" expand="true"/>
+            <task id="211" name="Agregar prototipo de interfaces APP CAFETESE" color="#22c55e" meeting="false" start="2026-11-18" duration="1" complete="100" expand="true"/>
+            <task id="212" name="Agregar prototipo APP CAFETESE" color="#22c55e" meeting="false" start="2026-11-18" duration="1" complete="100" expand="true"/>
+            <task id="213" name="feat: integrar carrito y detalle de productos CAFETESE" color="#22c55e" meeting="false" start="2026-11-20" duration="1" complete="100" expand="true"/>
+            <task id="214" name="Merge origin/rama-daniela into entrega-daniela (20/11)" color="#22c55e" meeting="false" start="2026-11-20" duration="1" complete="100" expand="true"/>
+        </task>
+
+        <!-- 3. Georgina García González -->
+        <task id="3" name="3. Georgina García González (rama-geogg17)" color="#9d174d" meeting="false" start="2026-11-03" duration="18" complete="100" expand="true">
+            <task id="301" name="Aportacion de geogg17: Ejercicio practico 1 y EP3 Diccionario de Clases producto en dart" color="#ec4899" meeting="false" start="2026-11-03" duration="1" complete="100" expand="true"/>
+            <task id="302" name="Aportacion de geogg17" color="#ec4899" meeting="false" start="2026-11-04" duration="1" complete="100" expand="true"/>
+            <task id="303" name="feat: agregar diagrama de Gantt del proyecto Cafeteria TESE" color="#ec4899" meeting="false" start="2026-11-04" duration="1" complete="100" expand="true"/>
+            <task id="304" name="Add files via upload (09/11)" color="#ec4899" meeting="false" start="2026-11-09" duration="1" complete="100" expand="true"/>
+            <task id="305" name="Prueba de subida de geogg17" color="#ec4899" meeting="false" start="2026-11-18" duration="1" complete="100" expand="true"/>
+            <task id="306" name="Add files via upload (18/11)" color="#ec4899" meeting="false" start="2026-11-18" duration="1" complete="100" expand="true"/>
+            <task id="307" name="Add files via upload (20/11)" color="#ec4899" meeting="false" start="2026-11-20" duration="1" complete="100" expand="true"/>
+        </task>
+
+        <!-- 4. Aracely Cayetano Modesto -->
+        <task id="4" name="4. Aracely Cayetano Modesto (rama-aracely)" color="#854d0e" meeting="false" start="2026-10-27" duration="25" complete="100" expand="true">
+            <task id="401" name="Aracely: configuracion inicial de Firebase y evidencias" color="#eab308" meeting="false" start="2026-10-27" duration="1" complete="100" expand="true"/>
+            <task id="402" name="Add files via upload (27/10)" color="#eab308" meeting="false" start="2026-10-27" duration="1" complete="100" expand="true"/>
+            <task id="403" name="Aportacion de Aracely: UML y Dart" color="#eab308" meeting="false" start="2026-11-03" duration="1" complete="100" expand="true"/>
+            <task id="404" name="Aportacion final: Diagrama de secuencia" color="#eab308" meeting="false" start="2026-11-03" duration="1" complete="100" expand="true"/>
+            <task id="405" name="Agregado documento final de evidencias en PDF" color="#eab308" meeting="false" start="2026-11-03" duration="1" complete="100" expand="true"/>
+            <task id="406" name="feat(auth): creacion del modelo AppUser para Firestore" color="#eab308" meeting="false" start="2026-11-20" duration="1" complete="100" expand="true"/>
+            <task id="407" name="feat(auth): implementacion de AuthRepository para Firebase" color="#eab308" meeting="false" start="2026-11-20" duration="1" complete="100" expand="true"/>
+        </task>
+
+        <!-- 5. Ingrid Natalia Sánchez Nicanor -->
+        <task id="5" name="5. Ingrid Natalia Sánchez Nicanor (rama_ingrid)" color="#5b21b6" meeting="false" start="2026-11-04" duration="17" complete="100" expand="true">
+            <task id="501" name="Agregar modelo Producto en Dart y documentar aportaciones de Ingrid" color="#8b5cf6" meeting="false" start="2026-11-04" duration="1" complete="100" expand="true"/>
+            <task id="502" name="Agregar actividades de las unidades 1, 2 y 3 de Fundamentos de Ingeniería de Software" color="#8b5cf6" meeting="false" start="2026-11-04" duration="1" complete="100" expand="true"/>
+            <task id="503" name="Agregar evidencias de Flutter sobre el proyecto de la aplicación Cafetería TESE" color="#8b5cf6" meeting="false" start="2026-11-04" duration="1" complete="100" expand="true"/>
+            <task id="504" name="Add files via upload (09/11)" color="#8b5cf6" meeting="false" start="2026-11-09" duration="1" complete="100" expand="true"/>
+            <task id="505" name="Add files via upload (18/11)" color="#8b5cf6" meeting="false" start="2026-11-18" duration="1" complete="100" expand="true"/>
+            <task id="506" name="Add files via upload (20/11)" color="#8b5cf6" meeting="false" start="2026-11-20" duration="1" complete="100" expand="true"/>
+        </task>
+
+        <!-- 6. Omar Escamilla Encinas -->
+        <task id="6" name="6. Omar Escamilla Encinas (rama-omarencinas-hub)" color="#0f766e" meeting="false" start="2026-11-04" duration="17" complete="100" expand="true">
+            <task id="601" name="Ejercicio 3:clase Producto en Dart" color="#14b8a6" meeting="false" start="2026-11-04" duration="1" complete="100" expand="true"/>
+            <task id="602" name="Aportaciones de omarencinas-hub" color="#14b8a6" meeting="false" start="2026-11-04" duration="1" complete="100" expand="true"/>
+            <task id="603" name="Add files via upload (09/11)" color="#14b8a6" meeting="false" start="2026-11-09" duration="1" complete="100" expand="true"/>
+            <task id="604" name="Add files via upload (18/11)" color="#14b8a6" meeting="false" start="2026-11-18" duration="1" complete="100" expand="true"/>
+            <task id="605" name="Add files via upload (20/11)" color="#14b8a6" meeting="false" start="2026-11-20" duration="1" complete="100" expand="true"/>
+        </task>
+    </tasks>
+    <resources>
+        <resource id="0" name="Christian Agustín Luna García" function="Default:0" contacts="ChrisSPD / Christian Luna" phone=""/>
+        <resource id="1" name="Daniela Gómez Medina" function="Default:0" contacts="dnny12" phone=""/>
+        <resource id="2" name="Georgina García González" function="Default:0" contacts="geogg17" phone=""/>
+        <resource id="3" name="Aracely Cayetano Modesto" function="Default:0" contacts="aracelycayetano4-CM" phone=""/>
+        <resource id="4" name="Ingrid Natalia Sánchez Nicanor" function="Default:1" contacts="ingridsn2201" phone=""/>
+        <resource id="5" name="Omar Escamilla Encinas" function="Default:0" contacts="omarescencinas-hub" phone=""/>
+    </resources>
+    <allocations>
+        <allocation task-id="101" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="102" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="103" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="104" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="105" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="106" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="107" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="108" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="109" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="110" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="111" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="112" resource-id="0" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="201" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="202" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="203" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="204" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="205" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="206" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="207" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="208" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="209" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="210" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="211" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="212" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="213" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="214" resource-id="1" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="301" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="302" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="303" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="304" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="305" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="306" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="307" resource-id="2" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="401" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="402" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="403" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="404" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="405" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="406" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="407" resource-id="3" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="501" resource-id="4" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="502" resource-id="4" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="503" resource-id="4" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="504" resource-id="4" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="505" resource-id="4" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="506" resource-id="4" function="Default:1" responsible="true" load="100.0"/>
+        <allocation task-id="601" resource-id="5" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="602" resource-id="5" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="603" resource-id="5" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="604" resource-id="5" function="Default:0" responsible="true" load="100.0"/>
+        <allocation task-id="605" resource-id="5" function="Default:0" responsible="true" load="100.0"/>
+    </allocations>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
