@@ -1,0 +1,44 @@
+Aportación de Georgina Garcia Gonzalez 
+Proyecto: Aplicación de Cafetería TESE
+1. Ejercicios Prácticos
+Ejercicio Práctico 1: Elicitación de Requisitos
+Levantamiento, análisis y definición formal de las necesidades funcionales y no funcionales del proyecto, garantizando la alineación entre los requerimientos del usuario y los objetivos del sistema.
+
+Ejercicio Práctico 2: Diagrama de Clases UML del Módulo de Pedidos
+Diseño del modelo estático del sistema mediante la elaboración del diagrama de clases en UML para el módulo de pedidos, identificando la estructura general y sus relaciones.
+
+Identificación de Clases Core:
+Definición de las clases Usuario, Producto, Pedido y GestorPedidos, asignando a cada una sus atributos y métodos correspondientes.
+
+Ejercicio Práctico 3: Programación de la Clase Producto en Dart
+Implementación en código orientado a objetos de la clase Producto utilizando el lenguaje Dart.
+
+Definición de Atributos Tipados:
+Declaración de variables fuertemente tipadas para la gestión de datos clave del producto (identificador, nombre, precio y cantidad en existencia).
+
+Desarrollo de Métodos de Negocio:
+Programación de funciones para la reducción de stock, consulta de detalles del producto y aplicación de descuentos.
+
+Ejercicio Práctico 5: Diagrama de Secuencia UML
+Modelado dinámico del flujo de interacción mediante un diagrama de secuencia UML para representar el proceso completo de agregar un producto al carrito de compras.
+
+2. Aportación al Proyecto
+Gestión del Tiempo y Cronograma: Planificación y estructuración del cronograma de actividades en GanttProject, asignando tareas específicas al equipo de trabajo con tiempos y entregables delimitados.
+
+Cálculo de la Ruta Crítica (CPM/PERT): Identificación y análisis de la secuencia de actividades clave mediante la elaboración de tablas de precedencias y tiempos, optimizando la holgura del proyecto para evitar retrasos.
+
+Metodología y Diagramación: Definición e implementación de la metodología de trabajo a través de esquemas estructurales y diagramas de flujo/procesos.
+
+Documentación Técnica: Elaboración y consolidación de la documentación general del proyecto, asegurando trazabilidad, orden y calidad en los entregables.
+
+Herramientas Utilizadas
+Visual Studio Code
+
+Lenguaje de programación Dart
+
+Git y GitHub
+
+Draw.io y Mermaid
+
+GanttProject + Excel
+
